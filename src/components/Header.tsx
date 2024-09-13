@@ -6,7 +6,11 @@ import SearchComponent from "./SearchComponent";
 import CustomButton from "./Button";
 import Image from "next/image";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+	openModal: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ openModal }) => {
 	const handleSearch = (query: string) => {
 		console.log("Searching for:", query);
 	};
@@ -32,15 +36,27 @@ const Header: React.FC = () => {
 					placeholder="SEARCH BUSINESS OR SERVICE"
 				/>
 			</div>
-			<div className="space-x-1 flex ">
-				<CustomButton variant="primary" onClick={handleClick} className="flex items-center justify-center gap-1">
+			<div className="space-x-1 flex">
+				<CustomButton
+					variant="primary"
+					onClick={openModal}
+					className="flex items-center justify-center gap-1"
+				>
 					<p>Sort By</p>
 					<Image src={"/up.svg"} alt="up" width={14} height={14} />
 				</CustomButton>
-				<CustomButton variant="white" onClick={handleClick} className="flex items-center justify-center gap-1">
+				<CustomButton
+					variant="white"
+					onClick={handleClick}
+					className="flex items-center justify-center gap-1"
+				>
 					<p>Light</p>
 				</CustomButton>
-				<CustomButton variant="white" onClick={handleClick} className="flex items-center justify-center gap-1">
+				<CustomButton
+					variant="white"
+					onClick={handleClick}
+					className="flex items-center justify-center gap-1"
+				>
 					<p>Dark</p>
 				</CustomButton>
 			</div>

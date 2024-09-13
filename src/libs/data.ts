@@ -9,7 +9,7 @@ export const colors: Color[] = [
   {
     color: "Green",
     imageSrc: "/light.png",
-    details: "Light green, Dark green, Army green",
+    details: "Light green, Dark green, Army",
     code: 100,
   },
   {
@@ -27,7 +27,7 @@ export const colors: Color[] = [
   {
     color: "Yellow",
     imageSrc: "/light.png",
-    details: "Canary yellow, Mustard yellow, Golden yellow",
+    details: "Canary, Mustard yellow, Golden",
     code: 103,
   },
   {
